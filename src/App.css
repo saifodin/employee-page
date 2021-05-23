@@ -1,38 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .App {
-  text-align: center;
+  background-color: #f6f5f8;
+  margin: auto;
+  /* height: 600px; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App header {
+  padding-top: 35px;
+  padding-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App header h1 {
+  color: #2f2f2f;
+  font-size: 2.2em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App > * {
+  margin: auto;
+  width: 90%;
+}
+
+.App main {
+  display: flex;
+  padding-bottom: 25px;
+}
+
+.App main .addEmp {
+  width: 30%;
+  background-color: white;
+  border-radius: 15px;
+  margin-right: 30px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  min-height: 569px;
+  max-height: 569px;
+}
+
+.App main .empCards {
+  width: 70%;
+}
+.App main .empCards .empTitle {
+  /* display: flex; */
+  /* justify-content: space-around; */
+  text-transform: uppercase;
+  color: #2d2d2f;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+.App main .empCards .empTitle span:nth-child(1) {
+  margin-left: 107px;
+}
+.App main .empCards .empTitle span:nth-child(2) {
+  margin-left: 166px;
+}
+.App main .empCards .empTitle span:nth-child(3) {
+  margin-left: 129px;
+}
+.App main .empCards .empTitle span:nth-child(4) {
+  margin-left: 136px;
+}
+
+.App main .empCards .cards {
+}
+
+.App main .empCards .cards .card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: white;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.App main .empCards .cards .card:hover {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.App main .empCards .cards .card > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.App main .empCards .cards .card > div span:first-of-type {
+  color: #2f2f2f;
+  font-weight: 500;
+  font-size: 15px;
+}
+.App main .empCards .cards .card > div span:last-of-type {
+  color: #8d969c;
+  font-size: 15px;
+}
+
+.App main .empCards .cards .card .name {
+  flex-direction: row;
+  align-items: center;
+}
+
+.App main .empCards .cards .card .name .empImg {
+  display: flex;
+}
+.App main .empCards .cards .card .name .empName {
+  display: flex;
+  flex-direction: column;
+}
+
+.App main .empCards .cards .card .name .empName span:first-of-type {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.App main .empCards .cards .card .name img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.App main .empCards .cards .card .manage {
+  flex-direction: row;
+  align-items: center;
+}
+.App main .empCards .cards .card .manage img {
+  height: 35px;
+  width: 25px;
+  cursor: pointer;
+}
+.App main .empCards .cards .card .manage .vLine {
+  border-right: 1px solid #c9c8cf;
+  min-height: 40px;
+  margin: 0px 20px;
+}
+
+/* *********** */
+
+.addEmp form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.addEmp input {
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  box-sizing: border-box;
+  height: 48px;
+  width: 90%;
+  margin-top: 20px;
+  padding: 0 12px;
+  border: 1px solid #f1f2f6;
+  border-radius: 15px;
+  font-size: 16px;
+  text-align: left;
+  letter-spacing: 0.3px;
+  appearance: none;
+  background-color: #f1f2f6;
+  box-shadow: none;
+  caret-color: #a1a9c3;
+  color: #132968;
+  transition: border 0.15s;
+  padding-left: 35px;
+}
+.addEmp input:hover,
+.addEmp input:focus {
+  border: 1px solid #a1a9c3;
+  outline: 0;
+}
+
+.addEmp button {
+  font-weight: 400;
+  font-weight: bold;
+  height: 48px;
+  width: 90%;
+  margin-top: 20px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  appearance: none;
+  background-color: #0ec9ae;
+  box-shadow: none;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.addEmp button.edit {
+  background-color: #e0a800;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addEmp button:hover,
+.addEmp button:focus {
+  border: 1px solid #a1a9c3;
+  outline: 0;
 }
